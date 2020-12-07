@@ -97,45 +97,86 @@ textarea {
 
 
 html {
-  background-color: #ff6699;
+  background-color: #C9B0EB;
   height: 100%;
+  width: 100%;
   
 }
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
-  padding: 2em;
+  padding: 0em 2em;
   font-size: 1.25em;
-  height: 100%;
-  
-
-}
-
-.wrapper {
-  /*add display:flex and set justify-content to space-between*/
-  font-weight: 700;
   display: flex;
-  justify-content: space-between;
-  align-items: center; 
+  justify-content: center;
+  color: #fff;
+
 }
 
-.div-1, .div-2, .div-3 {
+.flex-container {
+  /*add display:flex and set justify-content to space-between*/
+  
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+}
+header,footer {
+  
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+header h1{
+  font-family: 'Caveat', cursive;
+  
+}
+
+main {
+  
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #fff;
+}
+
+main p {
+  font-size: 1.35em;
+}
+
+main p span {
+  font-family: 'Caveat', cursive;
+}
+
+
+
+
+
+.flex-item {
   /*give the divs a width of 30%, add display:flex, set justify-content and align-items to center*/
   color: #fff;
   line-height: 1.5em;
-  font-size: 1.3em;
-  height: 200px;
+  font-size: 1em;
+  
   display: flex;
   justify-content: center;
-  width: 30%;
-  align-items: flex-start;
-  
- 
+  align-items: center;
+  border-bottom: 1px solid #fff;
+ }
+
+ footer { 
+ border-top: 1px solid #fff
 }
 
-.div-1, .div-2 {
-  border-right: 1px solid #fff;
+footer p {
+  padding: 30px 20px 0 0;
+  font-family: 'Dancing Script', cursive;
 }
+
+
+
+
 
 
 
@@ -219,6 +260,30 @@ body {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+
+@media all and (max-width: 768px) {
+
+  body{
+    padding: 1em;
+  }
+}
+
+@media (min-width: 1200px) {
+.flex-item {
+  flex-basis: 30%;
+  border-bottom: none;
+}
+#div-2 p{
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+  padding:0 40px;
+}
+
+}
+
+
+
+
 
 @media print,
        (-webkit-min-device-pixel-ratio: 1.25),
